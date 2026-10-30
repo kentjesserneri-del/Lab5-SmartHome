@@ -22,8 +22,7 @@ DHT dht(DHTPIN, DHTTYPE);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // --- RainMaker Variables ---
-Device sensorDevice("Sensor");
-// Claude's fix: Make params READ only
+Device sensorDevice("Sensor", "esp.device.temperature-sensor");
 Param tempParam("Temperature", "esp.param.temperature", value(0.0f), PROP_FLAG_READ);
 Param lightParam("Light", "esp.param.light", value(0), PROP_FLAG_READ);
 
@@ -69,10 +68,9 @@ void setup() {
     sensorDevice.addNameParam();
     my_node.addDevice(sensorDevice);
 
-    // --- CLAUDE'S FIX: Start RainMaker BEFORE Provisioning ---
+    // --- THE FIX TO SHOW THE QR CODE ---
     RMaker.start();
 
-    // Start provisioning with BTDM memory free
     WiFi.onEvent(provisioningEvent);
     WiFiProv.beginProvision(WIFI_PROV_SCHEME_BLE, 
                             WIFI_PROV_SCHEME_HANDLER_FREE_BTDM,
@@ -90,7 +88,6 @@ void loop() {
         
         float t = dht.readTemperature();
         
-        // Claude's fix: Skip sending if NaN
         if (isnan(t)) {
             Serial.println("Failed to read DHT11");
             return; 

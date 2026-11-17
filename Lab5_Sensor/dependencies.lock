@@ -1,0 +1,169 @@
+dependencies:
+  espressif/cbor:
+    component_hash: dad9ca860963e930366510a10b422b3125a4fb27b979712ed65efcbcd742de50
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 0.6.1~4
+  espressif/esp_daylight:
+    dependencies: []
+    source:
+      path: C:\BCA152-LAB5\Lab5_Plug\managed_components\espressif__esp_daylight
+      type: local
+    version: 1.0.1
+  espressif/esp_schedule:
+    dependencies: []
+    source:
+      path: C:\BCA152-LAB5\Lab5_Plug\managed_components\espressif__esp_schedule
+      type: local
+    version: 1.3.3
+  espressif/esp_secure_cert_mgr:
+    dependencies: []
+    source:
+      path: C:\BCA152-LAB5\Lab5_Plug\managed_components\espressif__esp_secure_cert_mgr
+      type: local
+    version: 2.9.3
+  espressif/jsmn:
+    dependencies: []
+    source:
+      path: C:\BCA152-LAB5\Lab5_Plug\managed_components\espressif__jsmn
+      type: local
+    version: 1.1.0
+  espressif/json_generator:
+    dependencies: []
+    source:
+      path: C:\BCA152-LAB5\Lab5_Plug\managed_components\espressif__json_generator
+      type: local
+    version: 1.1.2
+  espressif/json_parser:
+    dependencies: []
+    source:
+      path: C:\BCA152-LAB5\Lab5_Plug\managed_components\espressif__json_parser
+      type: local
+    version: 1.0.3
+  espressif/mdns:
+    dependencies: []
+    source:
+      path: C:\BCA152-LAB5\Lab5_Plug\managed_components\espressif__mdns
+      type: local
+    version: 1.15.1
+  espressif/network_provisioning:
+    dependencies: []
+    source:
+      path: C:\BCA152-LAB5\Lab5_Plug\managed_components\espressif__network_provisioning
+      type: local
+    version: 1.2.5
+  espressif/qrcode:
+    dependencies: []
+    source:
+      path: C:\BCA152-LAB5\Lab5_Plug\managed_components\espressif__qrcode
+      type: local
+    version: 0.2.0
+  espressif/rmaker_cmd_resp:
+    dependencies: []
+    source:
+      path: C:\BCA152-LAB5\Lab5_Plug\managed_components\espressif__rmaker_cmd_resp
+      type: local
+    version: 1.0.0
+  espressif/rmaker_common:
+    dependencies: []
+    source:
+      path: C:\BCA152-LAB5\Lab5_Plug\managed_components\espressif__rmaker_common
+      type: local
+    version: 1.12.0
+  espressif/rmaker_common_events:
+    component_hash: 3cd947e1e97c3c391087f0f82167c830dd20dd852e36db3c918f9bbff484b2ff
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.1'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.2.0
+  espressif/rmaker_console:
+    component_hash: 627c588581909ea68676f100e1ad0643fab7b5402c5d5cc4994785d61fa69326
+    dependencies:
+    - name: espressif/rmaker_system_ctrl
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.0.0
+    - name: espressif/rmaker_time_sync
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.0.0
+    - name: idf
+      require: private
+      version: '>=5.1'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.1.0
+  espressif/rmaker_system_ctrl:
+    component_hash: b4208fbc7e99b30fb1d272cbd30e578327079a6495499d12fb466b6c2fc0d899
+    dependencies:
+    - name: espressif/rmaker_common_events
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.0.0
+    - name: idf
+      require: private
+      version: '>=5.1'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.0
+  espressif/rmaker_time_sync:
+    component_hash: 5797d2fcd903cad6e9142981e1d0602d7b5efa2c9197a72da8d2e05be7ef568b
+    dependencies:
+    - name: espressif/rmaker_common_events
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.0.0
+    - name: idf
+      require: private
+      version: '>=5.1'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.2
+  espressif/rmaker_work_queue:
+    component_hash: 26f9da268e535e7f01418558fbaa495b03c22e1f7181c57f67b2d4d4492c67d2
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.1'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.1.0
+  idf:
+    source:
+      type: idf
+    version: 5.1.4
+direct_dependencies:
+- espressif/cbor
+- espressif/esp_daylight
+- espressif/esp_schedule
+- espressif/esp_secure_cert_mgr
+- espressif/jsmn
+- espressif/json_generator
+- espressif/json_parser
+- espressif/mdns
+- espressif/network_provisioning
+- espressif/qrcode
+- espressif/rmaker_cmd_resp
+- espressif/rmaker_common
+- espressif/rmaker_common_events
+- espressif/rmaker_console
+- espressif/rmaker_system_ctrl
+- espressif/rmaker_time_sync
+- espressif/rmaker_work_queue
+- idf
+manifest_hash: c694d12023ec564c402aeaa1e8697b13d5ba78fe0d00c583ccd099a66ffebd5c
+target: esp32
+version: 2.0.0
